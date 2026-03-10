@@ -1,0 +1,34 @@
+{
+    "title": "progress_entries",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "branch": {
+            "type": "string",
+            "description": "Service branch: army, navy, raf, police"
+        },
+        "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date of the entry"
+        },
+        "exercises": {
+            "type": "string",
+            "description": "JSON string of exercises array with name, value, unit"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "branch",
+        "date",
+        "exercises"
+    ]
+}

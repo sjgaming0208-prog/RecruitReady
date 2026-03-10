@@ -1,0 +1,43 @@
+{
+    "title": "user_preferences",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "selected_branch": {
+            "type": "string",
+            "description": "Selected service branch"
+        },
+        "subscription_tier": {
+            "type": "string",
+            "description": "Subscription tier: recruit, soldier, officer"
+        },
+        "subscription_status": {
+            "type": "string",
+            "description": "active, cancelled, expired"
+        },
+        "stripe_customer_id": {
+            "type": "string",
+            "description": "Stripe customer ID"
+        },
+        "stripe_subscription_id": {
+            "type": "string",
+            "description": "Stripe subscription ID"
+        },
+        "subscription_end_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When subscription expires"
+        }
+    },
+    "required": [
+        "id",
+        "user_id"
+    ]
+}

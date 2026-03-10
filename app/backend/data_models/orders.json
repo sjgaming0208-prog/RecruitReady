@@ -1,0 +1,55 @@
+{
+    "title": "orders",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "user_id": {
+            "type": "string",
+            "description": "User ID"
+        },
+        "plan_id": {
+            "type": "string",
+            "description": "Plan identifier (recruit, soldier, officer)"
+        },
+        "plan_name": {
+            "type": "string",
+            "description": "Plan display name"
+        },
+        "amount": {
+            "type": "integer",
+            "description": "Amount in pence (e.g., 499 for £4.99)"
+        },
+        "currency": {
+            "type": "string",
+            "description": "Currency code, default GBP"
+        },
+        "status": {
+            "type": "string",
+            "description": "Order status: pending, paid, cancelled, refunded"
+        },
+        "stripe_session_id": {
+            "type": "string",
+            "description": "Stripe checkout session ID"
+        },
+        "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Order creation timestamp"
+        },
+        "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last update timestamp"
+        }
+    },
+    "required": [
+        "id",
+        "user_id",
+        "plan_id",
+        "amount",
+        "status"
+    ]
+}
